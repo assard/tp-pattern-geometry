@@ -11,7 +11,7 @@ public class LogGeometryVisitorTest {
 
 	@Test
 	public void testVisitPoint() {
-		//arrange
+//		//arrange
 //		ByteArrayOutputStream os = new ByteArrayOutputStream();
 //		PrintStream out = new PrintStream(os);
 //		LogGeometryVisitor visitor = new LogGeometryVisitor(out);
@@ -20,12 +20,12 @@ public class LogGeometryVisitorTest {
 //		//act
 //		p.accept(visitor);
 //		String result = os.toString("UTF8");
-		
-		//arrange
-		
-		
-		
-		//fail("Not yet implemented");
+//		
+//		//arrange
+//		
+//		
+//		
+//		fail("Not yet implemented");
 	}
 
 }

@@ -4,15 +4,15 @@ import java.io.PrintStream;
 
 public class LogGeometryVisitor implements GeometryVisitor{
 	
-//	private PrintStream out;
+	private PrintStream out;
 	
 	public LogGeometryVisitor() {
 		
 	}
 	
-//	public logGeometryVisitor(PrintStream out) {
-//		this.out = out;
-//	}
+	public LogGeometryVisitor(PrintStream out) {
+		this.out = out;
+	}
 	
 	public void visit(Point point) {
 		
