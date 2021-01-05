@@ -1,6 +1,6 @@
 package org.acme.geometry;
 
-public class WktVisitor {
+public class WktVisitor implements GeometryVisitor{
 	
 	private StringBuilder buffer;
 	
