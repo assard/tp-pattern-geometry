@@ -34,7 +34,7 @@ public class WktWriter {
 		
 	}
 	
-	private String writerCoordinate(Coordinate coordinate) {
+	public static String writerCoordinate(Coordinate coordinate) {
 		return coordinate.getX() + " " + coordinate.getY();
 	}
 	
