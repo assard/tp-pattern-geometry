@@ -10,10 +10,12 @@ public class Point extends AbstractGeometry{
 	} 
 	
 	public Point() {
+		super();
 		this.coordinate = new Coordinate();
 	}
 	
 	public Point(Coordinate coordinate) {
+		super();
 		this.coordinate = coordinate;
 	}
 	
@@ -31,6 +33,8 @@ public class Point extends AbstractGeometry{
 				this.getCoordinate().getX()+dx,
 				this.getCoordinate().getY()+dy
 				);
+		
+		this.triggerChange();
 		
 		return;
 	}
