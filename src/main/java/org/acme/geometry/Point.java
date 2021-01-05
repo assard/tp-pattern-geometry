@@ -2,6 +2,7 @@ package org.acme.geometry;
 
 public class Point implements Geometry{
 	private Coordinate coordinate;
+	
 	private final String TYPE = "Point"; 
 	
 	public String getType() {
@@ -43,5 +44,9 @@ public class Point implements Geometry{
 		EnvelopeBuilder builder = new EnvelopeBuilder();
 		builder.insert(this.coordinate);
 		return builder.build();
+	}
+	
+	public void accept(GeometryVisitor visitor) {
+		visitor.visit(this);
 	}
 }
