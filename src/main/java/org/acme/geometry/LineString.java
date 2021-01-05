@@ -8,10 +8,12 @@ public class LineString extends AbstractGeometry{
 	private final String TYPE = "LineString";
 	
 	public LineString() {
+		super();
 		this.points = new ArrayList<Point>();
 	}
 	
 	public LineString(List<Point> points) {
+		super();
 		assert(points != null);
 		this.points = points;
 	}
@@ -37,6 +39,8 @@ public class LineString extends AbstractGeometry{
 		for(Point point : points) {
 			point.translate(dx, dy);
 		}
+		
+		this.triggerChange();
 		
 		return;
 	}
