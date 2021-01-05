@@ -1,6 +1,6 @@
 package org.acme.geometry;
 
-public class EnvelopeBuilder {
+public class EnvelopeBuilder implements GeometryVisitor{
 	
 	private double xmin;
 	private double xmax;
@@ -45,6 +45,17 @@ public class EnvelopeBuilder {
 					new Coordinate(this.xmin,this.ymin),
 					new Coordinate(this.xmax,this.ymax)
 				);
+	}
+	
+	public void visit(Point point) {
+		insert(point.getCoordinate());
+	}
+	
+	
+	public void visit(LineString lineString) {
+		for(int i = 0 ; i < lineString.getNumPoints() ; i++) {
+			insert(lineString.getPointN(i).getCoordinate());
+		}
 	}
 	
 }

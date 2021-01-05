@@ -2,7 +2,7 @@ package org.acme.geometry;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LineString implements Geometry{
+public class LineString extends AbstractGeometry{
 	
 	private List<Point> points;
 	private final String TYPE = "LineString";
@@ -47,14 +47,6 @@ public class LineString implements Geometry{
 			pointsClone.add(point.clone());
 		}
 		return new LineString(pointsClone);
-	}
-	
-	public Envelope getEnvelope() {
-		EnvelopeBuilder builder = new EnvelopeBuilder();
-		for(Point point : this.points) {
-			builder.insert(point.getCoordinate());
-		}
-		return builder.build();
 	}
 	
 	public void accept(GeometryVisitor visitor) {
