@@ -37,9 +37,7 @@ public class GeometryWithCachedEnvelope implements Geometry,GeometryListener{
 	}
 	
 	public void onChange(Geometry geometry) {
-		System.out.println("There is a changement");
-		this.original = geometry;
-		this.cachedEnvelope = this.original.getEnvelope();
+		this.cachedEnvelope = null;
 	}
 	
 	public void addListener(GeometryListener listener) {
